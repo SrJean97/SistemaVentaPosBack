@@ -1,6 +1,10 @@
+using Pos.Infraestructura.Extensiones;
+
 var builder = WebApplication.CreateBuilder(args);
+var configuracionCapasInyeccion = builder.Configuration;
 
 // Add services to the container.
+builder.Services.AgregarInyeccionInfraestructura(configuracionCapasInyeccion);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
