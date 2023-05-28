@@ -1,0 +1,17 @@
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Infraestructura\bin\Debug\net6.0\Pos.Infraestructura.deps.json
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Infraestructura\bin\Debug\net6.0\Pos.Infraestructura.dll
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Infraestructura\bin\Debug\net6.0\Pos.Infraestructura.pdb
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Infraestructura\bin\Debug\net6.0\Pos.Dominio.dll
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Infraestructura\bin\Debug\net6.0\Pos.Utilidades.dll
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Infraestructura\bin\Debug\net6.0\Pos.Dominio.pdb
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Infraestructura\bin\Debug\net6.0\Pos.Utilidades.pdb
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Infraestructura\obj\Debug\net6.0\Pos.Infraestructura.csproj.AssemblyReference.cache
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Infraestructura\obj\Debug\net6.0\Pos.Infraestructura.GeneratedMSBuildEditorConfig.editorconfig
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Infraestructura\obj\Debug\net6.0\Pos.Infraestructura.AssemblyInfoInputs.cache
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Infraestructura\obj\Debug\net6.0\Pos.Infraestructura.AssemblyInfo.cs
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Infraestructura\obj\Debug\net6.0\Pos.Infraestructura.csproj.CoreCompileInputs.cache
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Infraestructura\obj\Debug\net6.0\Pos.Infraestructura.csproj.CopyComplete
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Infraestructura\obj\Debug\net6.0\Pos.Infraestructura.dll
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Infraestructura\obj\Debug\net6.0\refint\Pos.Infraestructura.dll
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Infraestructura\obj\Debug\net6.0\Pos.Infraestructura.pdb
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Infraestructura\obj\Debug\net6.0\ref\Pos.Infraestructura.dll

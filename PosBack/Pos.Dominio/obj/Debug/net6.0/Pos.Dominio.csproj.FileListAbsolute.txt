@@ -1,0 +1,14 @@
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Dominio\bin\Debug\net6.0\Pos.Dominio.deps.json
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Dominio\bin\Debug\net6.0\Pos.Dominio.runtimeconfig.json
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Dominio\bin\Debug\net6.0\Pos.Dominio.dll
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Dominio\bin\Debug\net6.0\Pos.Dominio.pdb
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Dominio\obj\Debug\net6.0\Pos.Dominio.csproj.AssemblyReference.cache
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Dominio\obj\Debug\net6.0\Pos.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Dominio\obj\Debug\net6.0\Pos.Dominio.AssemblyInfoInputs.cache
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Dominio\obj\Debug\net6.0\Pos.Dominio.AssemblyInfo.cs
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Dominio\obj\Debug\net6.0\Pos.Dominio.csproj.CoreCompileInputs.cache
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Dominio\obj\Debug\net6.0\Pos.Dominio.dll
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Dominio\obj\Debug\net6.0\refint\Pos.Dominio.dll
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Dominio\obj\Debug\net6.0\Pos.Dominio.pdb
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Dominio\obj\Debug\net6.0\Pos.Dominio.genruntimeconfig.cache
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Dominio\obj\Debug\net6.0\ref\Pos.Dominio.dll

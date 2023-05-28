@@ -1,0 +1,12 @@
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Utilidades\bin\Debug\net6.0\Pos.Utilidades.deps.json
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Utilidades\bin\Debug\net6.0\Pos.Utilidades.dll
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Utilidades\bin\Debug\net6.0\Pos.Utilidades.pdb
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Utilidades\obj\Debug\net6.0\Pos.Utilidades.csproj.AssemblyReference.cache
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Utilidades\obj\Debug\net6.0\Pos.Utilidades.GeneratedMSBuildEditorConfig.editorconfig
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Utilidades\obj\Debug\net6.0\Pos.Utilidades.AssemblyInfoInputs.cache
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Utilidades\obj\Debug\net6.0\Pos.Utilidades.AssemblyInfo.cs
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Utilidades\obj\Debug\net6.0\Pos.Utilidades.csproj.CoreCompileInputs.cache
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Utilidades\obj\Debug\net6.0\Pos.Utilidades.dll
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Utilidades\obj\Debug\net6.0\refint\Pos.Utilidades.dll
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Utilidades\obj\Debug\net6.0\Pos.Utilidades.pdb
+D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Utilidades\obj\Debug\net6.0\ref\Pos.Utilidades.dll

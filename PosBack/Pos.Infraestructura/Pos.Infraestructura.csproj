@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pos.Dominio\Pos.Dominio.csproj" />
+    <ProjectReference Include="..\Pos.Utilidades\Pos.Utilidades.csproj" />
+  </ItemGroup>
+
 </Project>
