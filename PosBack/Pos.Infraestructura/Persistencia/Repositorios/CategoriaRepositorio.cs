@@ -1,4 +1,5 @@
-﻿using Pos.Dominio.Entidades;
+﻿using Microsoft.EntityFrameworkCore;
+using Pos.Dominio.Entidades;
 using Pos.Infraestructura.Commons.Base.Request;
 using Pos.Infraestructura.Commons.Base.Response;
 using Pos.Infraestructura.Persistencia.Interfaces;
@@ -19,9 +20,51 @@ namespace Pos.Infraestructura.Persistencia.Repositorios
             _context = context;
         }
 
-        public Task<BaseEntidadResponse<Category>> ListaCategoriasConFiltro(BaseFiltrosRequest filtros)
+        public async Task<BaseEntidadResponse<Category>> ListaCategoriasConFiltro(BaseFiltrosRequest filtros)
         {
-            throw new NotImplementedException();
+            //Primero inicializar nuestra BaseEntidadResponse
+            var response = new BaseEntidadResponse<Category>();
+
+            //Realizar consulta con LinQ
+            var categoriasBuscadas = (from c in _context.Categories
+                                      where c.AuditDeleteUser == null && c.AuditDeleteDate == null
+                                      select c).AsNoTracking().AsQueryable();
+            
+            //La misma consulta sin LinQ
+            //var categoriasBuscadas2 = await _context.Categories.Where(x => x.AuditDeleteUser == null && x.AuditDeleteDate == null).AsNoTracking().ToListAsync();
+
+            //Luego de consultar de la base de datos todas las categorias, apliquemos el primer filtro
+            if (filtros.NumeroTipoFiltro is not null && filtros.TextoFiltro is not null )
+            {
+                switch (filtros.NumeroTipoFiltro)
+                {
+                    case 1:
+                        categoriasBuscadas = categoriasBuscadas.Where(x => x.Name!.Contains(filtros.TextoFiltro));
+                        break;
+                    case 2:
+                        categoriasBuscadas = categoriasBuscadas.Where(x => x.Description!.Contains(filtros.TextoFiltro));
+                        break;
+                }
+            }
+
+            if (filtros.EstadoFiltro is not null)
+            {
+                categoriasBuscadas = categoriasBuscadas.Where(x => x.State.Equals(filtros.EstadoFiltro));
+            }
+
+            if (!string.IsNullOrEmpty(filtros.FechaInicio) && !string.IsNullOrEmpty(filtros.FechaFinal))
+            {
+                categoriasBuscadas = categoriasBuscadas.Where(x => x.AuditCreateDate >= Convert.ToDateTime(filtros.FechaInicio) &&
+                                                                x.AuditCreateDate <= Convert.ToDateTime(filtros.FechaFinal));
+            }
+
+            if (filtros.AtributoPorCualOrdenar is null) filtros.AtributoPorCualOrdenar = "CategoryId";
+
+            response.TotalRegistros = await categoriasBuscadas.CountAsync();
+            response.TotalItems = await Ordenamiento(filtros, categoriasBuscadas, !(bool)filtros.DescargaExcel!).ToListAsync();
+
+
+            return response;
         }
 
         public Task<IEnumerable<Category>> ListaCategoriasSinFiltro()

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pos.Infraestructura.Commons.Base.Request
 {
-    public class BaseFiltrosRequest
+    public class BaseFiltrosRequest : BasePaginacionRequest
     {
         public int? NumeroTipoFiltro { get; set; } = null;
         public string? TextoFiltro { get; set; } = null;
