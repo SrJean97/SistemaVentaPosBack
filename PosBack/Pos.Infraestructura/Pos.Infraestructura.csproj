@@ -15,4 +15,8 @@
     <ProjectReference Include="..\Pos.Utilidades\Pos.Utilidades.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Commons\Base\Response\" />
+  </ItemGroup>
+
 </Project>
