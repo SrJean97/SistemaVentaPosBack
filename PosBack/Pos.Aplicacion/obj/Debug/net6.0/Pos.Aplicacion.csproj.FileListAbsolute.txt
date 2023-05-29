@@ -17,3 +17,11 @@ D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Aplicacion\obj\Debug
 D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Aplicacion\obj\Debug\net6.0\refint\Pos.Aplicacion.dll
 D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Aplicacion\obj\Debug\net6.0\Pos.Aplicacion.pdb
 D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Aplicacion\obj\Debug\net6.0\ref\Pos.Aplicacion.dll
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Aplicacion\obj\Debug\net6.0\Pos.Aplicacion.csproj.AssemblyReference.cache
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Aplicacion\obj\Debug\net6.0\Pos.Aplicacion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Aplicacion\obj\Debug\net6.0\Pos.Aplicacion.AssemblyInfoInputs.cache
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Aplicacion\obj\Debug\net6.0\Pos.Aplicacion.AssemblyInfo.cs
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Aplicacion\obj\Debug\net6.0\Pos.Aplicacion.csproj.CoreCompileInputs.cache
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Aplicacion\obj\Debug\net6.0\Pos.Aplicacion.dll
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Aplicacion\obj\Debug\net6.0\refint\Pos.Aplicacion.dll
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Aplicacion\obj\Debug\net6.0\Pos.Aplicacion.pdb

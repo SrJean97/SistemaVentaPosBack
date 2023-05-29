@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pos.Aplicacion.Validaciones
+namespace Pos.Aplicacion.Validaciones.Categoria
 {
     public class CategoriaValidaciones : AbstractValidator<CategoriaRequestDto>
     {
