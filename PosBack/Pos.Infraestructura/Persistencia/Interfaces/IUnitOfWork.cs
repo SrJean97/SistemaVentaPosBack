@@ -11,8 +11,7 @@ namespace Pos.Infraestructura.Persistencia.Interfaces
     {
         //Acá crearemos todas nuestras interfaces a utilizara  nivel de interfaces de infraestructura.
 
-
-
+        ICategoriaRepositorio CategoriaRepositorio { get; }
 
 
         //Estos dos métodos 

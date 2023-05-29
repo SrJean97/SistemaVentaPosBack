@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Pos.Infraestructura.Commons.Base.Response
 {
-    internal class BorrarEntidad
+    public class BaseEntidadResponse<T>
     {
+        public int? TotalRegistros { get; set; }
+        public List<T>? TotalItems { get; set;}
     }
 }
