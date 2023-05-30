@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Pos.Aplicacion.Dtos.Request;
 using Pos.Aplicacion.Interfaces;
 using Pos.Infraestructura.Commons.Base.Request;
 
@@ -36,6 +37,13 @@ namespace Pos.Api.Controllers.Categoria
         public async Task<IActionResult> BuscarCategoriaxId(int categoriaId)
         {
             var response = await _categoriaAplicacion.BuscarCategoriaxId(categoriaId);
+            return Ok(response);
+        }
+
+        [HttpPost("Registrar")]
+        public async Task<IActionResult> RegistrarCategoria([FromBody] CategoriaRequestDto requestDto)
+        {
+            var response = await _categoriaAplicacion.RegistrarCategoria(requestDto);
             return Ok(response);
         }
     }

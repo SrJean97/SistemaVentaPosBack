@@ -4,6 +4,7 @@ using Pos.Aplicacion.Dtos.Request;
 using Pos.Aplicacion.Dtos.Response;
 using Pos.Aplicacion.Interfaces;
 using Pos.Aplicacion.Validaciones.Categoria;
+using Pos.Dominio.Entidades;
 using Pos.Infraestructura.Commons.Base.Request;
 using Pos.Infraestructura.Commons.Base.Response;
 using Pos.Infraestructura.Persistencia.Interfaces;
@@ -88,9 +89,35 @@ namespace Pos.Aplicacion.Servicios
             return response;
         }
 
-        public Task<BaseResponse<bool>> RegistrarCategoria(CategoriaRequestDto requestDto)
+        public async Task<BaseResponse<bool>> RegistrarCategoria(CategoriaRequestDto requestDto)
         {
-            throw new NotImplementedException();
+            var response = new BaseResponse<bool>();
+
+            //Primero validar los atributos de la categoria que no vengan null
+            var categoriaValidada = await _validaciones.ValidateAsync(requestDto);
+
+            if (!categoriaValidada.IsValid)
+            {
+                response.IsSuccess = false;
+                response.Mensaje = MensajeRespuestas.MENSAJE_VALIDACION;
+                response.Errores = categoriaValidada.Errors;
+                return response;
+            }
+
+            var categoria = _mapper.Map<Category>(requestDto);
+            response.Data = await _unitOfWork.CategoriaRepositorio.RegistrarCategoria(categoria);
+
+            if (response.Data)
+            {
+                response.IsSuccess = true;
+                response.Mensaje = MensajeRespuestas.MENSAJE_GUARDADO;
+            }
+            else
+            {
+                response.IsSuccess = false;
+                response.Mensaje = MensajeRespuestas.MENSAJE_FALLIDO;
+            }
+            return response;
         }
 
         public Task<BaseResponse<bool>> EditarCategoria(int categoriaId, CategoriaRequestDto requestDto)

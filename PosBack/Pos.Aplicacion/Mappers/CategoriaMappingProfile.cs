@@ -26,6 +26,9 @@ namespace Pos.Aplicacion.Mappers
 
             CreateMap<Category, CategoriaSelectResponseDto>();
 
+            CreateMap<Category, CategoriaRequestDto>()
+                .ReverseMap();
+
             //Segundo mapeo
             
         }

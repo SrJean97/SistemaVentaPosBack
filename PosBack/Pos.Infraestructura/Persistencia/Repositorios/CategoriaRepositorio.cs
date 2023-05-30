@@ -78,25 +78,47 @@ namespace Pos.Infraestructura.Persistencia.Repositorios
 
         public async Task<Category> BuscarCategoriaxId(int idCategoria)
         {
-            //var categoriaBuscada = await _context.Categories.AsNoTracking().FirstOrDefaultAsync(x => x.CategoryId.Equals(idCategoria));
-            var categoriaBuscada = await _context.Categories.FindAsync(idCategoria);
+            //Cualquiera de estos dos métodos de busqueda funcionan
+            var categoriaBuscada = await _context.Categories.AsNoTracking().FirstOrDefaultAsync(x => x.CategoryId.Equals(idCategoria));
+            //var categoriaBuscada = await _context.Categories.FindAsync(idCategoria);
 
             return categoriaBuscada!;
         }
 
-        public Task<bool> RegistrarCategoria(Category categoria)
+        public async Task<bool> RegistrarCategoria(Category categoria)
         {
-            throw new NotImplementedException();
+            categoria.AuditCreateUser = 1;
+            categoria.AuditCreateDate = DateTime.Now;
+
+            await _context.AddAsync(categoria);
+            var registrosAfectados = await _context.SaveChangesAsync();
+            return registrosAfectados > 0;
         }
 
-        public Task<bool> EditarCategoria(Category categoria)
+        public async Task<bool> EditarCategoria(Category categoria)
         {
-            throw new NotImplementedException();
+            categoria.AuditUpdateUser = 1;
+            categoria.AuditUpdateDate = DateTime.Now;
+
+            _context.Update(categoria);
+            _context.Entry(categoria).Property(x => x.AuditCreateUser).IsModified = false;
+            _context.Entry(categoria).Property(x => x.AuditCreateDate).IsModified = false;
+
+            var registrosAfectados = await _context.SaveChangesAsync();
+            return registrosAfectados > 0;
         }
 
-        public Task<bool> EliminarCategoria(int idCategoria)
+        public async Task<bool> EliminarCategoria(int idCategoria)
         {
-            throw new NotImplementedException();
+            //Acá podemos reutilizar el método o sinpmelente hacer una consula LINQ
+            var categoriaBuscada = await BuscarCategoriaxId(idCategoria);
+
+            categoriaBuscada.AuditDeleteUser = 1;
+            categoriaBuscada.AuditDeleteDate = DateTime.Now;
+
+            _context.Update(categoriaBuscada);
+            var registrosAfectados = await _context.SaveChangesAsync();
+            return registrosAfectados > 0;
         }
   
     }
