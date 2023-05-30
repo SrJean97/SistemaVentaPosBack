@@ -150,9 +150,31 @@ namespace Pos.Aplicacion.Servicios
 
         }
 
-        public Task<BaseResponse<bool>> EliminarCategoria(int CategoriaId)
+        public async Task<BaseResponse<bool>> EliminarCategoria(int categoriaId)
         {
-            throw new NotImplementedException();
+            var response = new BaseResponse<bool>();
+
+            var categoriaBuscada = await BuscarCategoriaxId(categoriaId);
+
+            if (categoriaBuscada.Data is null)
+            {
+                response.IsSuccess = false;
+                response.Mensaje = MensajeRespuestas.MENSAJE_QUERY_VACIO;
+            }
+
+            response.Data = await _unitOfWork.CategoriaRepositorio.EliminarCategoria(categoriaId);
+
+            if (response.Data)
+            {
+                response.IsSuccess = true;
+                response.Mensaje = MensajeRespuestas.MENSAJE_ELIMINACION;
+            }
+            else
+            {
+                response.IsSuccess = false;
+                response.Mensaje = MensajeRespuestas.MENSAJE_FALLIDO;
+            }
+            return response;
         }
         
     }
