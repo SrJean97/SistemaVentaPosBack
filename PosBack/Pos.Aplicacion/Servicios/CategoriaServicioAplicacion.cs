@@ -120,9 +120,34 @@ namespace Pos.Aplicacion.Servicios
             return response;
         }
 
-        public Task<BaseResponse<bool>> EditarCategoria(int categoriaId, CategoriaRequestDto requestDto)
+        public async Task<BaseResponse<bool>> EditarCategoria(int categoriaId, CategoriaRequestDto requestDto)
         {
-            throw new NotImplementedException();
+            var response = new BaseResponse<bool>();
+            var categoriaBuscada = await BuscarCategoriaxId(categoriaId);
+
+            if (categoriaBuscada.Data is null)
+            {
+                response.IsSuccess = false;
+                response.Mensaje = MensajeRespuestas.MENSAJE_QUERY_VACIO;
+            }
+
+            var categoria = _mapper.Map<Category>(requestDto);
+            categoria.CategoryId = categoriaId;
+            response.Data = await _unitOfWork.CategoriaRepositorio.EditarCategoria(categoria);
+
+            if (response.Data)
+            {
+                response.IsSuccess = true;
+                response.Mensaje = MensajeRespuestas.MENSAJE_ACTUALIZACION;
+            }
+            else
+            {
+                response.IsSuccess = false;
+                response.Mensaje = MensajeRespuestas.MENSAJE_FALLIDO;
+            }
+
+            return response;
+
         }
 
         public Task<BaseResponse<bool>> EliminarCategoria(int CategoriaId)
