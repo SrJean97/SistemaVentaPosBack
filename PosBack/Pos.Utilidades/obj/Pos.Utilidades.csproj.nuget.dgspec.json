@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jhean\\OneDrive\\Documentos\\Cursos Udemy\\SistemaVentaPos\\SistemaVentaPos\\PosBack\\Pos.Utilidades\\Pos.Utilidades.csproj": {}
+    "D:\\2023\\Cursos Udemy\\SistemaVentaPos\\Desarrollo\\PosBack\\Pos.Utilidades\\Pos.Utilidades.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jhean\\OneDrive\\Documentos\\Cursos Udemy\\SistemaVentaPos\\SistemaVentaPos\\PosBack\\Pos.Utilidades\\Pos.Utilidades.csproj": {
+    "D:\\2023\\Cursos Udemy\\SistemaVentaPos\\Desarrollo\\PosBack\\Pos.Utilidades\\Pos.Utilidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jhean\\OneDrive\\Documentos\\Cursos Udemy\\SistemaVentaPos\\SistemaVentaPos\\PosBack\\Pos.Utilidades\\Pos.Utilidades.csproj",
+        "projectUniqueName": "D:\\2023\\Cursos Udemy\\SistemaVentaPos\\Desarrollo\\PosBack\\Pos.Utilidades\\Pos.Utilidades.csproj",
         "projectName": "Pos.Utilidades",
-        "projectPath": "C:\\Users\\jhean\\OneDrive\\Documentos\\Cursos Udemy\\SistemaVentaPos\\SistemaVentaPos\\PosBack\\Pos.Utilidades\\Pos.Utilidades.csproj",
+        "projectPath": "D:\\2023\\Cursos Udemy\\SistemaVentaPos\\Desarrollo\\PosBack\\Pos.Utilidades\\Pos.Utilidades.csproj",
         "packagesPath": "C:\\Users\\jhean\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jhean\\OneDrive\\Documentos\\Cursos Udemy\\SistemaVentaPos\\SistemaVentaPos\\PosBack\\Pos.Utilidades\\obj\\",
+        "outputPath": "D:\\2023\\Cursos Udemy\\SistemaVentaPos\\Desarrollo\\PosBack\\Pos.Utilidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

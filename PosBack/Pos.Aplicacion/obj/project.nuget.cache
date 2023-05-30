@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nlh/Rq5VPcmeCZ9v9KRGqigkgXNGn6RWdXvmU9QrMExsIw8RZ0kuhTjW3VAM/hDqfz4J8wqjWLfM+hCNqe8C6w==",
+  "dgSpecHash": "2osp9m0UXfeytouRD1Gfy+Ic5RZ065vJk55etl8vpaK4ewwr9nRnhkf5gn1Yo25jckm4dIgf8KlsZbESdwDxHA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jhean\\OneDrive\\Documentos\\Cursos Udemy\\SistemaVentaPos\\SistemaVentaPos\\PosBack\\Pos.Aplicacion\\Pos.Aplicacion.csproj",
+  "projectFilePath": "D:\\2023\\Cursos Udemy\\SistemaVentaPos\\Desarrollo\\PosBack\\Pos.Aplicacion\\Pos.Aplicacion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jhean\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\jhean\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
