@@ -115,6 +115,7 @@ namespace Pos.Infraestructura.Persistencia.Repositorios
 
             categoriaBuscada.AuditDeleteUser = 1;
             categoriaBuscada.AuditDeleteDate = DateTime.Now;
+            categoriaBuscada.State = 0;
 
             _context.Update(categoriaBuscada);
             var registrosAfectados = await _context.SaveChangesAsync();

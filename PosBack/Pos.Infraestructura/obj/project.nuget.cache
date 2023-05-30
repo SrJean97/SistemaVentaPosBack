@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fn2iLq97rq8kG8VITGepzQvW2tyFdqoxjO6Cjum6SLmZcGE1g3DbIaMdF/cF0ZfFb0I+F35rJtOEmzC91BMHaw==",
+  "dgSpecHash": "xZoqWtQoUjRC6coNe1BEmpeohef36I0uWIQklpSe9peF9OV7EccpNbmjTuSe6jlgY4RSaMqOljbyEsJJMTyILQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jhean\\OneDrive\\Documentos\\Cursos Udemy\\SistemaVentaPos\\SistemaVentaPos\\PosBack\\Pos.Infraestructura\\Pos.Infraestructura.csproj",
+  "projectFilePath": "D:\\2023\\Cursos Udemy\\SistemaVentaPos\\Desarrollo\\PosBack\\Pos.Infraestructura\\Pos.Infraestructura.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jhean\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\jhean\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

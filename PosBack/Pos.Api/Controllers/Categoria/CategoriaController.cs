@@ -46,5 +46,20 @@ namespace Pos.Api.Controllers.Categoria
             var response = await _categoriaAplicacion.RegistrarCategoria(requestDto);
             return Ok(response);
         }
+
+        [HttpPut("Editar/{categoriaId:int}")]
+        public async Task<IActionResult> Editarcategoria(int categoriaId, [FromBody] CategoriaRequestDto request)
+        {
+            var response = await _categoriaAplicacion.EditarCategoria(categoriaId, request);
+            return Ok(response);
+        }
+
+        [HttpPut("Eliminar/{categoriaId:int}")]
+        public async Task<IActionResult> Eliminarcategoria(int categoriaId)
+        {
+            var response = await _categoriaAplicacion.EliminarCategoria(categoriaId);
+            return Ok(response);
+        }
+
     }
 }
