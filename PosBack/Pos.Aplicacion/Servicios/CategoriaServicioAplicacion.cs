@@ -49,9 +49,23 @@ namespace Pos.Aplicacion.Servicios
             return response;
         }
 
-        public Task<BaseResponse<IEnumerable<CategoriaSelectResponseDto>>> ListarCategoriasSinFiltro()
+        public async Task<BaseResponse<IEnumerable<CategoriaSelectResponseDto>>> ListarCategoriasSinFiltro()
         {
-            throw new NotImplementedException();
+            var response = new BaseResponse<IEnumerable<CategoriaSelectResponseDto>>();
+            var categoriasBuscadas = await _unitOfWork.CategoriaRepositorio.ListaCategoriasSinFiltro();
+
+            if (categoriasBuscadas is not null)
+            {
+                response.IsSuccess= true;
+                response.Data = _mapper.Map<IEnumerable<CategoriaSelectResponseDto>>(categoriasBuscadas);
+                response.Mensaje = MensajeRespuestas.MENSAJE_CONSULTA;
+            }
+            else
+            {
+                response.IsSuccess= false;
+                response.Mensaje = MensajeRespuestas.MENSAJE_QUERY_VACIO;
+            }
+            return response;
         }
 
         public Task<BaseResponse<CategoriaResponseDto>> BuscarCategoriaxId(int categoriaId)

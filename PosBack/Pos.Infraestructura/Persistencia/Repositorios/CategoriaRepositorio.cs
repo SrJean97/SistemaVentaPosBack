@@ -3,6 +3,7 @@ using Pos.Dominio.Entidades;
 using Pos.Infraestructura.Commons.Base.Request;
 using Pos.Infraestructura.Commons.Base.Response;
 using Pos.Infraestructura.Persistencia.Interfaces;
+using Pos.Utilidades.Constantes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -67,9 +68,11 @@ namespace Pos.Infraestructura.Persistencia.Repositorios
             return response;
         }
 
-        public Task<IEnumerable<Category>> ListaCategoriasSinFiltro()
+        public async Task<IEnumerable<Category>> ListaCategoriasSinFiltro()
         {
-            throw new NotImplementedException();
+            var categoriasVigentes = await _context.Categories
+                .Where(x => x.State.Equals((int)CategoriaEstados.Activo) && x.AuditDeleteUser == null && x.AuditDeleteDate == null).AsNoTracking().ToListAsync();
+            return categoriasVigentes;
         }
 
         public Task<Category> BuscarCategoriaxId(int idCategoria)

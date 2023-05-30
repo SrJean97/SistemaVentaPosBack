@@ -17,10 +17,18 @@ namespace Pos.Api.Controllers.Categoria
         }
 
         //Primer método para listar las categorias con filtro
-        [HttpPost]
+        [HttpPost("ListaConFiltros")]
         public async Task<IActionResult> ListaCategoriasConFiltro([FromBody] BaseFiltrosRequest filtros)
         {
             var response = await _categoriaAplicacion.ListarCategoriasConFiltro(filtros);
+            return Ok(response);
+        }
+
+        //Listar categorias sin iltros
+        [HttpGet("ListaSinFiltros")]
+        public async Task<IActionResult> ListaCategoriasSinFiltro()
+        {
+            var response = await _categoriaAplicacion.ListarCategoriasSinFiltro();
             return Ok(response);
         }
     }

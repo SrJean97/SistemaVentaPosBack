@@ -19,9 +19,4 @@
     <ProjectReference Include="..\Pos.Utilidades\Pos.Utilidades.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Extensiones\" />
-    <Folder Include="Servicios\" />
-  </ItemGroup>
-
 </Project>

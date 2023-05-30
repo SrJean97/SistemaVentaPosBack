@@ -2,6 +2,7 @@
 using Pos.Aplicacion.Dtos.Request;
 using Pos.Aplicacion.Dtos.Response;
 using Pos.Dominio.Entidades;
+using Pos.Infraestructura.Commons.Base.Response;
 using Pos.Utilidades.Constantes;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,11 @@ namespace Pos.Aplicacion.Mappers
             CreateMap<Category, CategoriaResponseDto>()
                 .ForMember(x => x.EstadoDescriptivo, x => x.MapFrom(y => y.State.Equals((int)CategoriaEstados.Activo) ? "Activo" : "Inactivo"))
                 .ReverseMap();
+
+            CreateMap<BaseEntidadResponse<Category>, BaseEntidadResponse<CategoriaResponseDto>>()
+                .ReverseMap();
+
+            CreateMap<Category, CategoriaSelectResponseDto>();
 
             //Segundo mapeo
             
