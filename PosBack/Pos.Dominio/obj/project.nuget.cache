@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9b+AebsLPeYIa7arcp9a7/sGGAmH3PqFA2NXbBAwjdmLlPGFlkFqpKcdTxMEi9NfxtWE2J7jCsKaEKYHx40nuw==",
+  "dgSpecHash": "73aGbzP9KERBzHtNWhtGnppzInDKiZZRrstAxwp/hnrErasx3iprPuc/3/mTYqrfxdz4CPlY1fZtTorjtakU4w==",
   "success": true,
-  "projectFilePath": "D:\\2023\\Cursos Udemy\\SistemaVentaPos\\Desarrollo\\PosBack\\Pos.Dominio\\Pos.Dominio.csproj",
+  "projectFilePath": "C:\\Users\\jhean\\OneDrive\\Documentos\\Cursos Udemy\\SistemaVentaPos\\SistemaVentaPos\\PosBack\\Pos.Dominio\\Pos.Dominio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jhean\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\jhean\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
