@@ -12,3 +12,17 @@ D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Dominio\obj\Debug\ne
 D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Dominio\obj\Debug\net6.0\Pos.Dominio.pdb
 D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Dominio\obj\Debug\net6.0\Pos.Dominio.genruntimeconfig.cache
 D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Dominio\obj\Debug\net6.0\ref\Pos.Dominio.dll
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Dominio\bin\Debug\net6.0\Pos.Dominio.deps.json
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Dominio\bin\Debug\net6.0\Pos.Dominio.runtimeconfig.json
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Dominio\bin\Debug\net6.0\Pos.Dominio.dll
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Dominio\bin\Debug\net6.0\Pos.Dominio.pdb
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Dominio\obj\Debug\net6.0\Pos.Dominio.csproj.AssemblyReference.cache
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Dominio\obj\Debug\net6.0\Pos.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Dominio\obj\Debug\net6.0\Pos.Dominio.AssemblyInfoInputs.cache
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Dominio\obj\Debug\net6.0\Pos.Dominio.AssemblyInfo.cs
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Dominio\obj\Debug\net6.0\Pos.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Dominio\obj\Debug\net6.0\Pos.Dominio.dll
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Dominio\obj\Debug\net6.0\refint\Pos.Dominio.dll
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Dominio\obj\Debug\net6.0\Pos.Dominio.pdb
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Dominio\obj\Debug\net6.0\Pos.Dominio.genruntimeconfig.cache
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Dominio\obj\Debug\net6.0\ref\Pos.Dominio.dll

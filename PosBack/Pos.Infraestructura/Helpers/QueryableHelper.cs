@@ -12,7 +12,7 @@ namespace Pos.Infraestructura.Helpers
     public static class QueryableHelper
     {
         //Necesito retornar los registros iniciales de la paginación
-        public static IQueryable Paginacion(this IQueryable queryable, BasePaginacionRequest request)
+        public static IQueryable<T> Paginacion<T>(this IQueryable<T> queryable, BasePaginacionRequest request)
         {
             //Skip -> Va a omitir de la primera pagina los registros iniciales.
             //Take -> Va a mostrar los registros de la página inicial.   

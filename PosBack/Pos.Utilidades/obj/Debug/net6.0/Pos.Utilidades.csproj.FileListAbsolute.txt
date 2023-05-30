@@ -10,3 +10,15 @@ D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Utilidades\obj\Debug
 D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Utilidades\obj\Debug\net6.0\refint\Pos.Utilidades.dll
 D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Utilidades\obj\Debug\net6.0\Pos.Utilidades.pdb
 D:\2023\Cursos Udemy\SistemaVentaPos\Desarrollo\PosBack\Pos.Utilidades\obj\Debug\net6.0\ref\Pos.Utilidades.dll
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Utilidades\bin\Debug\net6.0\Pos.Utilidades.deps.json
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Utilidades\bin\Debug\net6.0\Pos.Utilidades.dll
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Utilidades\bin\Debug\net6.0\Pos.Utilidades.pdb
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Utilidades\obj\Debug\net6.0\Pos.Utilidades.csproj.AssemblyReference.cache
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Utilidades\obj\Debug\net6.0\Pos.Utilidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Utilidades\obj\Debug\net6.0\Pos.Utilidades.AssemblyInfoInputs.cache
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Utilidades\obj\Debug\net6.0\Pos.Utilidades.AssemblyInfo.cs
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Utilidades\obj\Debug\net6.0\Pos.Utilidades.csproj.CoreCompileInputs.cache
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Utilidades\obj\Debug\net6.0\Pos.Utilidades.dll
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Utilidades\obj\Debug\net6.0\refint\Pos.Utilidades.dll
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Utilidades\obj\Debug\net6.0\Pos.Utilidades.pdb
+C:\Users\jhean\OneDrive\Documentos\Cursos Udemy\SistemaVentaPos\SistemaVentaPos\PosBack\Pos.Utilidades\obj\Debug\net6.0\ref\Pos.Utilidades.dll
