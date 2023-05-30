@@ -31,5 +31,12 @@ namespace Pos.Api.Controllers.Categoria
             var response = await _categoriaAplicacion.ListarCategoriasSinFiltro();
             return Ok(response);
         }
+
+        [HttpGet("{categoriaId:int}")]
+        public async Task<IActionResult> BuscarCategoriaxId(int categoriaId)
+        {
+            var response = await _categoriaAplicacion.BuscarCategoriaxId(categoriaId);
+            return Ok(response);
+        }
     }
 }

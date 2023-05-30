@@ -68,9 +68,24 @@ namespace Pos.Aplicacion.Servicios
             return response;
         }
 
-        public Task<BaseResponse<CategoriaResponseDto>> BuscarCategoriaxId(int categoriaId)
+        public async Task<BaseResponse<CategoriaResponseDto>> BuscarCategoriaxId(int categoriaId)
         {
-            throw new NotImplementedException();
+            var response = new BaseResponse<CategoriaResponseDto>();
+
+            var categoria = await _unitOfWork.CategoriaRepositorio.BuscarCategoriaxId(categoriaId);
+
+            if (categoria is not null)
+            {
+                response.IsSuccess = true;
+                response.Data = _mapper.Map<CategoriaResponseDto>(categoria);
+                response.Mensaje = MensajeRespuestas.MENSAJE_CONSULTA;
+            }
+            else
+            {
+                response.IsSuccess= false;
+                response.Mensaje = MensajeRespuestas.MENSAJE_QUERY_VACIO;
+            }
+            return response;
         }
 
         public Task<BaseResponse<bool>> RegistrarCategoria(CategoriaRequestDto requestDto)

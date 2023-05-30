@@ -7,6 +7,7 @@ using Pos.Utilidades.Constantes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -75,9 +76,12 @@ namespace Pos.Infraestructura.Persistencia.Repositorios
             return categoriasVigentes;
         }
 
-        public Task<Category> BuscarCategoriaxId(int idCategoria)
+        public async Task<Category> BuscarCategoriaxId(int idCategoria)
         {
-            throw new NotImplementedException();
+            //var categoriaBuscada = await _context.Categories.AsNoTracking().FirstOrDefaultAsync(x => x.CategoryId.Equals(idCategoria));
+            var categoriaBuscada = await _context.Categories.FindAsync(idCategoria);
+
+            return categoriaBuscada!;
         }
 
         public Task<bool> RegistrarCategoria(Category categoria)
