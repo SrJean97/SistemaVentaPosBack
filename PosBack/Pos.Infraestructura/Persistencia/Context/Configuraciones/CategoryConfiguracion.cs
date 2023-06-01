@@ -14,6 +14,8 @@ namespace Pos.Infraestructura.Persistencia.Context.Configuraciones
         
         public void Configure(EntityTypeBuilder<Category> entity)
         {
+            entity.Property(e => e.Id).HasColumnName("CategoryId");
+
             entity.Property(e => e.Name).HasMaxLength(100);
         }
     }

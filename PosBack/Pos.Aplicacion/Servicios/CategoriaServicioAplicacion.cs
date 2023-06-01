@@ -132,7 +132,7 @@ namespace Pos.Aplicacion.Servicios
             }
 
             var categoria = _mapper.Map<Category>(requestDto);
-            categoria.CategoryId = categoriaId;
+            categoria.Id = categoriaId;
             response.Data = await _unitOfWork.CategoriaRepositorio.EditarCategoria(categoria);
 
             if (response.Data)

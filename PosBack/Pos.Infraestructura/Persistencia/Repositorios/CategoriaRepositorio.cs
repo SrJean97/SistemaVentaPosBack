@@ -60,7 +60,7 @@ namespace Pos.Infraestructura.Persistencia.Repositorios
                                                                 x.AuditCreateDate <= Convert.ToDateTime(filtros.FechaFinal));
             }
 
-            if (filtros.AtributoPorCualOrdenar is null) filtros.AtributoPorCualOrdenar = "CategoryId";
+            if (filtros.AtributoPorCualOrdenar is null) filtros.AtributoPorCualOrdenar = "Id";
 
             response.TotalRegistros = await categoriasBuscadas.CountAsync();
             response.TotalItems = await Ordenamiento(filtros, categoriasBuscadas, !(bool)filtros.DescargaExcel!).ToListAsync();
@@ -79,7 +79,7 @@ namespace Pos.Infraestructura.Persistencia.Repositorios
         public async Task<Category> BuscarCategoriaxId(int idCategoria)
         {
             //Cualquiera de estos dos métodos de busqueda funcionan
-            var categoriaBuscada = await _context.Categories.AsNoTracking().FirstOrDefaultAsync(x => x.CategoryId.Equals(idCategoria));
+            var categoriaBuscada = await _context.Categories.AsNoTracking().FirstOrDefaultAsync(x => x.Id.Equals(idCategoria));
             //var categoriaBuscada = await _context.Categories.FindAsync(idCategoria);
 
             return categoriaBuscada!;
