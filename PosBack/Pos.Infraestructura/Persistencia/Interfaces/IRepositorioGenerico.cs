@@ -20,7 +20,7 @@ namespace Pos.Infraestructura.Persistencia.Interfaces
         Task<bool> EditarAsync(T entidad);
         Task<bool> DeleteAsync(int id);
 
-        //Método Queryable que sirve para realizarconsultas query de base de datos
+        //Método Queryable que sirve para realizar consultas query de base de datos
         IQueryable<T> BuscarEntidadQuery(Expression<Func<T, bool>>? filter = null);
 
         public IQueryable<TDTO> Ordenamiento<TDTO>(BasePaginacionRequest bpr, IQueryable<TDTO> queryable, bool paginacion = false) where TDTO : class;
