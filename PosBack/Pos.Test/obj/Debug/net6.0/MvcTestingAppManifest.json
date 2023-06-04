@@ -1,0 +1,7 @@
+{
+  "Pos.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\jhean\\OneDrive\\Documentos\\Cursos Udemy\\SistemaVentaPos\\SistemaVentaPos\\PosBack\\Pos.Api",
+  "Pos.Aplicacion, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\jhean\\OneDrive\\Documentos\\Cursos Udemy\\SistemaVentaPos\\SistemaVentaPos\\PosBack\\Pos.Aplicacion",
+  "Pos.Dominio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\jhean\\OneDrive\\Documentos\\Cursos Udemy\\SistemaVentaPos\\SistemaVentaPos\\PosBack\\Pos.Dominio",
+  "Pos.Infraestructura, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\jhean\\OneDrive\\Documentos\\Cursos Udemy\\SistemaVentaPos\\SistemaVentaPos\\PosBack\\Pos.Infraestructura",
+  "Pos.Utilidades, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\jhean\\OneDrive\\Documentos\\Cursos Udemy\\SistemaVentaPos\\SistemaVentaPos\\PosBack\\Pos.Utilidades"
+}

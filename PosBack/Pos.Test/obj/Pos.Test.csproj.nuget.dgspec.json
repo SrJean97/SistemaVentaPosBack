@@ -362,6 +362,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[3.0.4, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Testing": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.3.2, )"
