@@ -15,18 +15,18 @@ namespace Pos.Infraestructura.Persistencia.Interfaces
         Task<BaseEntidadResponse<Category>> ListaCategoriasConFiltro(BaseFiltrosRequest filtros);
 
         //Buscar las categorias sin filtro.
-        Task<IEnumerable<Category>> ListaCategoriasSinFiltro();
+        //Task<IEnumerable<Category>> ListaCategoriasSinFiltro();
 
-        //Buscar categoria por id
-        Task<Category> BuscarCategoriaxId(int idCategoria);
+        ////Buscar categoria por id
+        //Task<Category> BuscarCategoriaxId(int idCategoria);
 
-        //Registrar una categoria.
-        Task<bool> RegistrarCategoria(Category categoria);
+        ////Registrar una categoria.
+        //Task<bool> RegistrarCategoria(Category categoria);
 
-        //Editar una categoria
-        Task<bool> EditarCategoria(Category categoria);
+        ////Editar una categoria
+        //Task<bool> EditarCategoria(Category categoria);
 
-        //Eliminar una categoria.
-        Task<bool> EliminarCategoria(int idCategoria);
+        ////Eliminar una categoria.
+        //Task<bool> EliminarCategoria(int idCategoria);
     }
 }

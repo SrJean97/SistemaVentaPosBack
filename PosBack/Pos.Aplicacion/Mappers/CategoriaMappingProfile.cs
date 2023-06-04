@@ -18,18 +18,19 @@ namespace Pos.Aplicacion.Mappers
         {
             //Primer mapeo
             CreateMap<Category, CategoriaResponseDto>()
+                .ForMember(x => x.CategoryId, x => x.MapFrom(y => y.Id))
                 .ForMember(x => x.EstadoDescriptivo, x => x.MapFrom(y => y.State.Equals((int)CategoriaEstados.Activo) ? "Activo" : "Inactivo"))
                 .ReverseMap();
 
             CreateMap<BaseEntidadResponse<Category>, BaseEntidadResponse<CategoriaResponseDto>>()
                 .ReverseMap();
 
-            CreateMap<Category, CategoriaSelectResponseDto>();
+            CreateMap<Category, CategoriaSelectResponseDto>()
+                .ForMember(x => x.CategoryId, x => x.MapFrom(y => y.Id));
 
             CreateMap<Category, CategoriaRequestDto>()
                 .ReverseMap();
 
-            //Segundo mapeo
             
         }
     }

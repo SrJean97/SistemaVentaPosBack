@@ -53,7 +53,8 @@ namespace Pos.Aplicacion.Servicios
         public async Task<BaseResponse<IEnumerable<CategoriaSelectResponseDto>>> ListarCategoriasSinFiltro()
         {
             var response = new BaseResponse<IEnumerable<CategoriaSelectResponseDto>>();
-            var categoriasBuscadas = await _unitOfWork.CategoriaRepositorio.ListaCategoriasSinFiltro();
+            //var categoriasBuscadas = await _unitOfWork.CategoriaRepositorio.ListaCategoriasSinFiltro();
+            var categoriasBuscadas = await _unitOfWork.CategoriaRepositorio.ObtenerTodoAsync();
 
             if (categoriasBuscadas is not null)
             {
@@ -73,7 +74,8 @@ namespace Pos.Aplicacion.Servicios
         {
             var response = new BaseResponse<CategoriaResponseDto>();
 
-            var categoria = await _unitOfWork.CategoriaRepositorio.BuscarCategoriaxId(categoriaId);
+            //var categoria = await _unitOfWork.CategoriaRepositorio.BuscarCategoriaxId(categoriaId);
+            var categoria = await _unitOfWork.CategoriaRepositorio.ConsultarPorIdAsync(categoriaId);
 
             if (categoria is not null)
             {
@@ -105,7 +107,8 @@ namespace Pos.Aplicacion.Servicios
             }
 
             var categoria = _mapper.Map<Category>(requestDto);
-            response.Data = await _unitOfWork.CategoriaRepositorio.RegistrarCategoria(categoria);
+            //response.Data = await _unitOfWork.CategoriaRepositorio.RegistrarCategoria(categoria);
+            response.Data = await _unitOfWork.CategoriaRepositorio.RegistrarAsync(categoria);
 
             if (response.Data)
             {
@@ -132,8 +135,10 @@ namespace Pos.Aplicacion.Servicios
             }
 
             var categoria = _mapper.Map<Category>(requestDto);
-            categoria.CategoryId = categoriaId;
-            response.Data = await _unitOfWork.CategoriaRepositorio.EditarCategoria(categoria);
+            categoria.Id = categoriaId;
+
+            //response.Data = await _unitOfWork.CategoriaRepositorio.EditarCategoria(categoria);
+            response.Data = await _unitOfWork.CategoriaRepositorio.EditarAsync(categoria);
 
             if (response.Data)
             {
@@ -162,7 +167,8 @@ namespace Pos.Aplicacion.Servicios
                 response.Mensaje = MensajeRespuestas.MENSAJE_QUERY_VACIO;
             }
 
-            response.Data = await _unitOfWork.CategoriaRepositorio.EliminarCategoria(categoriaId);
+            //response.Data = await _unitOfWork.CategoriaRepositorio.EliminarCategoria(categoriaId);
+            response.Data = await _unitOfWork.CategoriaRepositorio.EliminarAsync(categoriaId);
 
             if (response.Data)
             {

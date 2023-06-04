@@ -33,6 +33,7 @@ namespace Pos.Api.Controllers.Categoria
             return Ok(response);
         }
 
+        //Buscar categoria por id
         [HttpGet("{categoriaId:int}")]
         public async Task<IActionResult> BuscarCategoriaxId(int categoriaId)
         {
@@ -40,6 +41,7 @@ namespace Pos.Api.Controllers.Categoria
             return Ok(response);
         }
 
+        //Registrar una categoria
         [HttpPost("Registrar")]
         public async Task<IActionResult> RegistrarCategoria([FromBody] CategoriaRequestDto requestDto)
         {
@@ -47,6 +49,7 @@ namespace Pos.Api.Controllers.Categoria
             return Ok(response);
         }
 
+        //Editar una categoría
         [HttpPut("Editar/{categoriaId:int}")]
         public async Task<IActionResult> Editarcategoria(int categoriaId, [FromBody] CategoriaRequestDto request)
         {
@@ -54,6 +57,7 @@ namespace Pos.Api.Controllers.Categoria
             return Ok(response);
         }
 
+        //Eliminar una categoría
         [HttpPut("Eliminar/{categoriaId:int}")]
         public async Task<IActionResult> Eliminarcategoria(int categoriaId)
         {

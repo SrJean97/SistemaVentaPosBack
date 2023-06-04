@@ -15,27 +15,18 @@ namespace Pos.Infraestructura.Persistencia.Repositorios
 {
     public class CategoriaRepositorio : RepositorioGenerico<Category>, ICategoriaRepositorio
     {
-        private readonly POSContext _context;
 
-        public CategoriaRepositorio(POSContext context)
-        {
-            _context = context;
-        }
+        public CategoriaRepositorio(POSContext context) : base(context) { }
 
         public async Task<BaseEntidadResponse<Category>> ListaCategoriasConFiltro(BaseFiltrosRequest filtros)
         {
-            //Primero inicializar nuestra BaseEntidadResponse
+            
             var response = new BaseEntidadResponse<Category>();
 
-            //Realizar consulta con LinQ
-            var categoriasBuscadas = (from c in _context.Categories
-                                      where c.AuditDeleteUser == null && c.AuditDeleteDate == null
-                                      select c).AsNoTracking().AsQueryable();
-            
-            //La misma consulta sin LinQ
-            //var categoriasBuscadas2 = await _context.Categories.Where(x => x.AuditDeleteUser == null && x.AuditDeleteDate == null).AsNoTracking().ToListAsync();
 
-            //Luego de consultar de la base de datos todas las categorias, apliquemos el primer filtro
+            var categoriasBuscadas = BuscarEntidadQuery(x => x.AuditDeleteUser == null && x.AuditDeleteDate == null);
+
+            
             if (filtros.NumeroTipoFiltro is not null && filtros.TextoFiltro is not null )
             {
                 switch (filtros.NumeroTipoFiltro)
@@ -60,7 +51,7 @@ namespace Pos.Infraestructura.Persistencia.Repositorios
                                                                 x.AuditCreateDate <= Convert.ToDateTime(filtros.FechaFinal));
             }
 
-            if (filtros.AtributoPorCualOrdenar is null) filtros.AtributoPorCualOrdenar = "CategoryId";
+            if (filtros.AtributoPorCualOrdenar is null) filtros.AtributoPorCualOrdenar = "Id";
 
             response.TotalRegistros = await categoriasBuscadas.CountAsync();
             response.TotalItems = await Ordenamiento(filtros, categoriasBuscadas, !(bool)filtros.DescargaExcel!).ToListAsync();
@@ -69,58 +60,59 @@ namespace Pos.Infraestructura.Persistencia.Repositorios
             return response;
         }
 
-        public async Task<IEnumerable<Category>> ListaCategoriasSinFiltro()
-        {
-            var categoriasVigentes = await _context.Categories
-                .Where(x => x.State.Equals((int)CategoriaEstados.Activo) && x.AuditDeleteUser == null && x.AuditDeleteDate == null).AsNoTracking().ToListAsync();
-            return categoriasVigentes;
-        }
+        //public async Task<IEnumerable<Category>> ListaCategoriasSinFiltro()
+        //{
+        //    var categoriasVigentes = await _context.Categories
+        //        .Where(x => x.State.Equals((int)CategoriaEstados.Activo) && x.AuditDeleteUser == null && x.AuditDeleteDate == null).AsNoTracking().ToListAsync();
+        //    return categoriasVigentes;
 
-        public async Task<Category> BuscarCategoriaxId(int idCategoria)
-        {
-            //Cualquiera de estos dos métodos de busqueda funcionan
-            var categoriaBuscada = await _context.Categories.AsNoTracking().FirstOrDefaultAsync(x => x.CategoryId.Equals(idCategoria));
-            //var categoriaBuscada = await _context.Categories.FindAsync(idCategoria);
+        //}
 
-            return categoriaBuscada!;
-        }
+        //public async Task<Category> BuscarCategoriaxId(int idCategoria)
+        //{
+        //    //Cualquiera de estos dos métodos de busqueda funcionan
+        //    var categoriaBuscada = await _context.Categories.AsNoTracking().FirstOrDefaultAsync(x => x.Id.Equals(idCategoria));
+        //    //var categoriaBuscada = await _context.Categories.FindAsync(idCategoria);
 
-        public async Task<bool> RegistrarCategoria(Category categoria)
-        {
-            categoria.AuditCreateUser = 1;
-            categoria.AuditCreateDate = DateTime.Now;
+        //    return categoriaBuscada!;
+        //}
 
-            await _context.AddAsync(categoria);
-            var registrosAfectados = await _context.SaveChangesAsync();
-            return registrosAfectados > 0;
-        }
+        //public async Task<bool> RegistrarCategoria(Category categoria)
+        //{
+        //    categoria.AuditCreateUser = 1;
+        //    categoria.AuditCreateDate = DateTime.Now;
 
-        public async Task<bool> EditarCategoria(Category categoria)
-        {
-            categoria.AuditUpdateUser = 1;
-            categoria.AuditUpdateDate = DateTime.Now;
+        //    await _context.AddAsync(categoria);
+        //    var registrosAfectados = await _context.SaveChangesAsync();
+        //    return registrosAfectados > 0;
+        //}
 
-            _context.Update(categoria);
-            _context.Entry(categoria).Property(x => x.AuditCreateUser).IsModified = false;
-            _context.Entry(categoria).Property(x => x.AuditCreateDate).IsModified = false;
+        //public async Task<bool> EditarCategoria(Category categoria)
+        //{
+        //    categoria.AuditUpdateUser = 1;
+        //    categoria.AuditUpdateDate = DateTime.Now;
 
-            var registrosAfectados = await _context.SaveChangesAsync();
-            return registrosAfectados > 0;
-        }
+        //    _context.Update(categoria);
+        //    _context.Entry(categoria).Property(x => x.AuditCreateUser).IsModified = false;
+        //    _context.Entry(categoria).Property(x => x.AuditCreateDate).IsModified = false;
 
-        public async Task<bool> EliminarCategoria(int idCategoria)
-        {
-            //Acá podemos reutilizar el método o sinpmelente hacer una consula LINQ
-            var categoriaBuscada = await BuscarCategoriaxId(idCategoria);
+        //    var registrosAfectados = await _context.SaveChangesAsync();
+        //    return registrosAfectados > 0;
+        //}
 
-            categoriaBuscada.AuditDeleteUser = 1;
-            categoriaBuscada.AuditDeleteDate = DateTime.Now;
-            categoriaBuscada.State = 0;
+        //public async Task<bool> EliminarCategoria(int idCategoria)
+        //{
+        //    //Acá podemos reutilizar el método o sinpmelente hacer una consula LINQ
+        //    var categoriaBuscada = await BuscarCategoriaxId(idCategoria);
 
-            _context.Update(categoriaBuscada);
-            var registrosAfectados = await _context.SaveChangesAsync();
-            return registrosAfectados > 0;
-        }
+        //    categoriaBuscada.AuditDeleteUser = 1;
+        //    categoriaBuscada.AuditDeleteDate = DateTime.Now;
+        //    categoriaBuscada.State = 0;
+
+        //    _context.Update(categoriaBuscada);
+        //    var registrosAfectados = await _context.SaveChangesAsync();
+        //    return registrosAfectados > 0;
+        //}
   
     }
 }
